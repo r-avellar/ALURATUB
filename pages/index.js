@@ -2,7 +2,7 @@ import { Menu } from '../src/components/Menu'
 import { Timeline } from '../src/components/Timeline'
 import { Header } from '../src/components/Header'
 import user from "../config.json"
-import { CSSReset } from '../src/components/CSSReset'
+import { CSSReset } from '../src/components/styles/CSSReset'
 
 function HomePage() {
 

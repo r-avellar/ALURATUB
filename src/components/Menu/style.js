@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Logo } from "./Logo";
 
-const StyledMenu = styled.header`
+export const StyledMenu = styled.header`
   display: flex;
   flex-direction: row;
   height: 56px;
@@ -24,14 +23,3 @@ const StyledMenu = styled.header`
     }
   }
 `;
-export function Menu(){
-    return(
-        <>
-            <StyledMenu>
-                <Logo />
-            </StyledMenu>
-                
-        </>
-        
-    )
-}
