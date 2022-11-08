@@ -9,14 +9,14 @@ export function Timeline({ searchValue, ...props}){
                 {playlistsNames.map(playlist =>{
                     const videos = props.playlists[playlist]
                     return(
-                        <section>
+                        <section key={playlist}>
                             <h2>{playlist}</h2>
                             <div>
                                 {videos.filter(video =>{
                                     return video.title.toLowerCase().includes(searchValue.toLowerCase())
                                 }).map(video =>{
                                     return(
-                                        <a href={video.url}>
+                                        <a key={video.url} href={video.url}>
                                             <img src={video.thumb} />
                                             <span>{video.title}</span>
                                         </a>
