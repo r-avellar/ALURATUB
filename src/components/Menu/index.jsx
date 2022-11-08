@@ -1,11 +1,15 @@
 import { Logo } from "../Logo";
+import { Search } from "../Search";
 import { StyledMenu } from './style'
 
-export function Menu(){
+export function Menu({ filterValue, setFilterValue }){
     return(
         <>
             <StyledMenu>
-                <Logo />
+                <div>
+                    <Logo />
+                </div>
+                <Search filterValue={filterValue} setFilterValue={setFilterValue}/>
             </StyledMenu>
                 
         </>

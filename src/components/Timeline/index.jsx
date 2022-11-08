@@ -1,6 +1,6 @@
 import { StyledTimeline} from './style'
 
-export function Timeline(props){
+export function Timeline({ searchValue, ...props}){
     const playlistsNames = Object.keys(props.playlists)
     return(
        <>
@@ -12,7 +12,9 @@ export function Timeline(props){
                         <section>
                             <h2>{playlist}</h2>
                             <div>
-                                {videos.map(video =>{
+                                {videos.filter(video =>{
+                                    return video.title.toLowerCase().includes(searchValue.toLowerCase())
+                                }).map(video =>{
                                     return(
                                         <a href={video.url}>
                                             <img src={video.thumb} />
