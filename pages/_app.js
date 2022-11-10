@@ -4,6 +4,7 @@ import { ColorModeContext } from '../src/components/ColorMode'
 import { useContext }from "react";
 import { ProviderWrapper } from "../src/components/ProviderWrapper";
 import { theme } from '../Styles/themes'
+import { RegisterVideo } from "../src/components/RegisterVideo";
 
 
 function App({ Component, pageProps }){
@@ -13,6 +14,7 @@ function App({ Component, pageProps }){
         <ThemeProvider theme={theme[contexto.mode] }>
             <CSSReset />
             <Component {...pageProps} />
+            <RegisterVideo />
         </ThemeProvider>
     )
 }
